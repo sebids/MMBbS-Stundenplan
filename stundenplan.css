@@ -1,0 +1,54 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 16pt;
+	margin: 0;
+}
+
+#vertretungsplan {
+	float: left;
+	width: 630px;
+	height: 630px;
+	padding: 5px;
+	margin: 0 5px 20px 5px;
+	border: 1px lightgrey solid;
+	text-align: center;
+	overflow: hidden;
+}
+
+#vertretungsplan_div {
+	height: 550px;
+	overflow: hidden;
+}
+
+#stundenplan {
+	float: left;
+	position: relative;
+	left: 0px;
+	width: 630px;
+	height: 630px;
+	padding: 5px;
+	margin: 0 5px 20px 5px;
+	border: 1px lightgrey solid;
+	text-align: center;
+	overflow: hidden;
+}
+
+#stundenplan_div {
+	height: 550px;
+	overflow: hidden;
+}
+
+#vertretungsplan h1 {
+	color: #ff6666;
+}
+
+hr {
+	border: 1px dashed lightgrey;
+}
+
+table {
+	width: 100%;
+}
