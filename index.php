@@ -38,6 +38,10 @@ if($vertretungsplan === false) {
 	$vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00048.htm');
 }
 
+if($vertretungsplan === false) {
+	echo '<div><h1>Wir haben keine Schule! :)</h1></div>';	
+}
+else {
 $stundenplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00044.htm');
 
 $weekStart = getFirstDayOfWeek(date('o'), $week);
@@ -59,7 +63,7 @@ echo '<h1>Stundenplan für die Woche vom ' . $weekStart . '</h1><hr>';
 echo '<div id="stundenplan_div">';
 echo $stundenplanTable;
 echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00044.htm">Komplett anzeigen</a></div>';
-
+}
 
 
 ?>
