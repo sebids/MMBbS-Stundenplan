@@ -30,6 +30,10 @@ if(date('w') == 0 || date('w') == 6) {
 	$week++;
 }
 
+// add leading zero
+if($week < 10) {
+	$week = '0'.$week;
+}
 
 // get HTML-Page
 $vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00048.htm');
