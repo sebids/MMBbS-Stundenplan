@@ -31,7 +31,7 @@ if(date('w') == 0 || date('w') == 6) {
 }
 
 // add leading zero
-if($week < 10) {
+if(substr($week, 0, 1) != '0' && $week < 10) {
 	$week = '0'.$week;
 }
 
