@@ -7,6 +7,26 @@ h1 {
 	margin: 0;
 }
 
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+    border-bottom: 1px dashed lightgrey;
+    background-color: grey;
+    color: white;
+}
+
+h3 {
+    font-size: 10pt;
+    font-weight: bold;
+    border: 1px solid black;
+    color: black;
+    margin-bottom: 5px;
+}
+
+h3 strong {
+    color: red;
+}
+
 #vertretungsplan {
 	float: left;
 	width: 630px;
@@ -23,6 +43,21 @@ h1 {
 	overflow: hidden;
 }
 
+#vertretungsplanDetails {
+    float: left;
+    width: 630px;
+    padding: 5px;
+    margin: 0 5px 20px 5px;
+    border: 1px lightgrey solid;
+    text-align: center;
+    overflow: hidden;
+}
+
+#vertretungsplanDetails_div {
+    height: auto;
+    overflow: scroll;
+}
+
 #stundenplan {
 	float: left;
 	position: relative;
@@ -34,6 +69,14 @@ h1 {
 	border: 1px lightgrey solid;
 	text-align: center;
 	overflow: hidden;
+}
+
+#stundenplanCollapsable {
+    float: left;
+    position: relative;
+    left: 0px;
+    width: 630px;
+    margin-bottom: 20px;
 }
 
 #stundenplan_div {
@@ -51,4 +94,32 @@ hr {
 
 table {
 	width: 100%;
+}
+
+table.subst {
+    width: auto;
+    text-align: center;
+}
+
+table.vertDetails {
+    width: 70%;
+    margin-top: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid lightgrey;
+    border-collapse: collapse;
+}
+
+table.vertDetails td {
+    width: auto;
+    border: 1px solid lightgrey;
+}
+
+table.vertDetails th {
+    border: 1px solid lightgrey;
+}
+
+table.vertDetails strike {
+    color: red;
+    font-style: italic;
 }
