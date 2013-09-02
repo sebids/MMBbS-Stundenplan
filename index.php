@@ -100,23 +100,35 @@ if ($vertretungsplan === false) {
     $vertretungsplanTable = $vertretungsplan->find('table', 0);
 
     $vertretungsplanDetailsMonday = $vertretungsplanDetails->find('table.subst', 0);
-    $vertretMondayRows = getRows($vertretungsplanDetailsMonday);
-
+    if($vertretungsplanDetailsMonday !== NULL) {
+        $vertretMondayRows = getRows($vertretungsplanDetailsMonday);    
+    }
+    
     $vertretungsplanDetailsTuesday = $vertretungsplanDetails->find('table.subst', 1);
-    $vertretTuesdayRows = getRows($vertretungsplanDetailsTuesday);
-
+    if($vertretungsplanDetailsTuesday !== NULL) {
+        $vertretTuesdayRows = getRows($vertretungsplanDetailsTuesday);
+    }
+    
     $vertretungsplanDetailsWednesday = $vertretungsplanDetails->find('table.subst', 2);
-    $vertretWednesdayRows = getRows($vertretungsplanDetailsWednesday);
-
+    if($vertretungsplanDetailsWednesday !== NULL) {
+        $vertretWednesdayRows = getRows($vertretungsplanDetailsWednesday);
+    }
+    
     $vertretungsplanDetailsThursday = $vertretungsplanDetails->find('table.subst', 3);
-    $vertretThursdayRows = getRows($vertretungsplanDetailsThursday);
-
+    if($vertretungsplanDetailsThursday !== NULL) {
+        $vertretThursdayRows = getRows($vertretungsplanDetailsThursday);
+    }
+    
     $vertretungsplanDetailsFriday = $vertretungsplanDetails->find('table.subst', 4);
-    $vertretFridayRows = getRows($vertretungsplanDetailsFriday);
-
+    if($vertretungsplanDetailsFriday !== NULL) {
+        $vertretFridayRows = getRows($vertretungsplanDetailsFriday);
+    }
+    
     $vertretungsplanDetailsSaturday = $vertretungsplanDetails->find('table.subst', 5);
-    $vertretSaturdayRows = getRows($vertretungsplanDetailsSaturday);
-
+    if($vertretungsplanDetailsSaturday !== NULL) {
+        $vertretSaturdayRows = getRows($vertretungsplanDetailsSaturday);
+    }
+    
     echo '<div id="vertretungsplan">';
     echo '<h1>Vertretungsplan für die Woche vom ' . $weekStart . '</h1><hr>';
     echo '<div id="vertretungsplan_div">';
