@@ -80,18 +80,18 @@ if (substr($week, 0, 1) != '0' && $week < 10) {
 }
 
 // get HTML-Page
-$vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00048.htm');
-$vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00048.htm');
+$vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm');
+$vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00045.htm');
 if ($vertretungsplan === false) {
     $week++;
-    $vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00048.htm');
-    $vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00048.htm');
+    $vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm');
+    $vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00045.htm');
 }
 
 if ($vertretungsplan === false) {
     echo '<div><h1>Wir haben keine Schule! :)</h1></div>';
 } else {
-    $stundenplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00044.htm');
+    $stundenplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00041.htm');
 
     $weekStart = getFirstDayOfWeek(date('o'), $week);
 
@@ -133,7 +133,7 @@ if ($vertretungsplan === false) {
     echo '<h1>Vertretungsplan für die Woche vom ' . $weekStart . '</h1><hr>';
     echo '<div id="vertretungsplan_div">';
     echo $vertretungsplanTable;
-    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00048.htm">Komplett anzeigen</a>';
+    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm">Komplett anzeigen</a>';
     echo "</div>\n<br>\n";
 
     echo '<div id="vertretungsplanDetails">';
@@ -183,7 +183,7 @@ if ($vertretungsplan === false) {
     echo '<h1>Stundenplan für die Woche vom ' . $weekStart . '</h1><hr>';
     echo '<div id="stundenplan_div">';
     echo $stundenplanTable;
-    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00044.htm">Komplett anzeigen</a></div></details>';
+    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/klassen/' . $week . '/c/c00041.htm">Komplett anzeigen</a></div></details>';
 
 }
 
