@@ -80,12 +80,12 @@ if (substr($week, 0, 1) != '0' && $week < 10) {
 }
 
 // get HTML-Page
-$vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm');
-$vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00045.htm');
+$vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00041.htm');
+$vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00041.htm');
 if ($vertretungsplan === false) {
     $week++;
-    $vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm');
-    $vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00045.htm');
+    $vertretungsplan = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00041.htm');
+    $vertretungsplanDetails = @file_get_html('http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/w/w00041.htm');
 }
 
 if ($vertretungsplan === false) {
