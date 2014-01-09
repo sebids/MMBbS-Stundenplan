@@ -133,7 +133,7 @@ if ($vertretungsplan === false) {
     echo '<h1>Vertretungsplan für die Woche vom ' . $weekStart . '</h1><hr>';
     echo '<div id="vertretungsplan_div">';
     echo $vertretungsplanTable;
-    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00045.htm">Komplett anzeigen</a>';
+    echo '</div><a href="http://stundenplan.mmbbs.de/plan1011/ver_kla/' . $week . '/c/c00041.htm">Komplett anzeigen</a>';
     echo "</div>\n<br>\n";
 
     echo '<div id="vertretungsplanDetails">';
